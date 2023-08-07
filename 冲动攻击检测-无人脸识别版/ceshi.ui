@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>jiemian</class>
+ <widget class="QMainWindow" name="jiemian">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1138</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QFrame" name="background">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>40</y>
+      <width>1011</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame#background{
+	background-color:qlineargradient(x0:0, y0:1,x1:1, y1:1,stop:0.4 rgb(107,128,210),stop:1 rgb(180,140,255));
+border:0px solid red;
+border-radius:30px
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QFrame" name="frame_2">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>0</y>
+       <width>771</width>
+       <height>571</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#frame_2{
+	background-color:rgba(245,249,254);
+border:0px solid red;
+border-radius:30px
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="kaishi">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>50</y>
+        <width>110</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#kaishi{
+	font-size:20px;
+	font-family:&quot;楷体&quot;
+}</string>
+      </property>
+      <property name="text">
+       <string>开始</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="jieshu">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>50</y>
+        <width>110</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#jieshu{
+	font-size:20px;
+	font-family:&quot;楷体&quot;
+}</string>
+      </property>
+      <property name="text">
+       <string>结束</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tishi">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>110</y>
+        <width>281</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#tishi{
+	
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="xianshi">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>460</y>
+        <width>261</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>210</y>
+        <width>291</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="2" column="2">
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">QLabel#label_7{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>分</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="bpm">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_3">
+         <property name="styleSheet">
+          <string notr="true">QLabel#label_3{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>表情</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">QLabel#label_2{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>心率</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">QLabel#label_5{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>次/分</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLabel" name="score">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_4">
+         <property name="styleSheet">
+          <string notr="true">QLabel#label_4{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>得分</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="2">
+        <widget class="QLabel" name="emo">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QLabel" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>200</y>
+        <width>370</width>
+        <height>280</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#frame{
+	alignment：Aligncenter;
+	background-color:rgb(170, 255, 255)
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Quit">
+      <property name="geometry">
+       <rect>
+        <x>580</x>
+        <y>50</y>
+        <width>110</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton#Quit{
+	font-size:20px;
+	font-family:&quot;楷体&quot;
+}</string>
+      </property>
+      <property name="text">
+       <string>退出</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="peopleImgFrame">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>120</width>
+       <height>120</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QFrame#peopleImgFrame{
+	padding:5px;
+	background-color:rgb(255,255,255);
+	border-radius:30px
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="peopleImg">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>120</width>
+        <height>120</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel#peopleImg{
+	padding:5px;
+	background-color:rgb(255,255,255);
+	border-radius:30px
+}</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="detect_Name">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>180</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel#label{
+	padding-left:40px;
+	background-color:rgb(255,255,255);
+	border-radius:30px
+}</string>
+     </property>
+     <property name="text">
+      <string>检测中</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Quit</sender>
+   <signal>clicked()</signal>
+   <receiver>jiemian</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>934</x>
+     <y>109</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>568</x>
+     <y>320</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

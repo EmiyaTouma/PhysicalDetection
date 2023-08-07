@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>jiemian</class>
+ <widget class="QWidget" name="jiemian">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1099</width>
+    <height>616</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_8" rowstretch="100,360,150" columnstretch="1,1">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,2,5,2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_24">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">image: url(E:/张博睿-冲动攻击识别/packagetry/jmtb/北理工.jpeg);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="spacing">
+        <number>7</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_3">
+         <property name="font">
+          <font>
+           <family>华文琥珀</family>
+           <pointsize>24</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>智能巡情系统</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_4"/>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1">
+    <layout class="QGridLayout" name="gridLayout">
+     <property name="topMargin">
+      <number>15</number>
+     </property>
+     <item row="4" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QLabel" name="label_14">
+         <property name="styleSheet">
+          <string notr="true">image: url(package/情绪.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_15">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>emotion</string>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="emo">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_19">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <widget class="QLabel" name="label_5">
+         <property name="styleSheet">
+          <string notr="true">image: url(package/心率.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>bpm</string>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="bpm">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_7">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_17">
+         <property name="styleSheet">
+          <string notr="true">image: url(package/waveform_path_ecg.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_18">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>hrv</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="score">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_20">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="2" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QLabel" name="label_10">
+         <property name="styleSheet">
+          <string notr="true">image: url(package/S_健康呼吸首页.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>br</string>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="br">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_9">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="3" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">image: url(package/血氧.png);</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_6">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string>SpO2</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="SpO2">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="styleSheet">
+          <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:30px
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="10,1,1">
+     <property name="topMargin">
+      <number>15</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="frame">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="xianshi">
+       <property name="styleSheet">
+        <string notr="true">QLabel#label_2{
+	font-family:&quot;楷体&quot;;
+	font-size:20px
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <property name="leftMargin">
+        <number>100</number>
+       </property>
+       <property name="rightMargin">
+        <number>70</number>
+       </property>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QLabel" name="detect_Name">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:24px;
+	color:white;
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,1">
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>30</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="bottomMargin">
+        <number>30</number>
+       </property>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="5,5,1">
+       <property name="spacing">
+        <number>8</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <property name="leftMargin">
+          <number>50</number>
+         </property>
+         <property name="rightMargin">
+          <number>50</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="kaishi">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#kaishi{
+	font-size:20px;
+	font-family:&quot;楷体&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="jieshu">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#jieshu{
+	font-size:20px;
+	font-family:&quot;楷体&quot;
+}</string>
+           </property>
+           <property name="text">
+            <string>结束</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="leftMargin">
+          <number>50</number>
+         </property>
+         <property name="rightMargin">
+          <number>50</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="history">
+           <property name="font">
+            <font>
+             <family>楷体</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+	font-size:24px;
+	font-family:&quot;楷体&quot;;
+}</string>
+           </property>
+           <property name="text">
+            <string>更多历史数据</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:15px
+}</string>
+           </property>
+           <property name="text">
+            <string>BIT</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="jiemiantubiao.qrc"/>
+ </resources>
+ <connections/>
+</ui>

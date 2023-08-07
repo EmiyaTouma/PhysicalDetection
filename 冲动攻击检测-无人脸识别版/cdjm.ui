@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>jiemian</class>
+ <widget class="QWidget" name="jiemian">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1235</width>
+    <height>792</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget#jiemian
+{
+	background-color: #f8fbfc;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_8" rowstretch="100,360,100,100" columnstretch="1,1">
+   <item row="3" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="2,1">
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>60</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>25</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="waveform">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLabel#waveform
+{
+	background-color:white;
+	border: 2px solid grey;
+	border-radius:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3" stretch="5,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>25</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <property name="leftMargin">
+          <number>40</number>
+         </property>
+         <property name="rightMargin">
+          <number>50</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="kaishi">
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#kaishi{
+	width: 124px;
+    height: 30px;
+	background-color: white;
+	font-size:20px;
+	font-family:&quot;楷体&quot;;
+	border-style:solid;
+	border-width: 1px;
+	border-bottom-color: black;
+	border-right-color: black;
+	border-radius:6px;
+}
+
+QPushButton#kaishi:checked {
+    background-color: #8acdfa;
+	border-top-color: black;
+	border-left-color: black;
+	border-bottom-color: white;
+	border-right-color: white;
+}
+
+QPushButton:enabled 
+{
+	background-color: white;
+}
+
+QPushButton#kaishi:pressed {
+	background-color: #8acdfa;
+	border-top-color: black;
+	border-left-color: black;
+	border-bottom-color: white;
+	border-right-color: white;
+}
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>开始</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="jieshu">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#jieshu{
+	width: 124px;
+    height: 30px;
+	background-color: white;
+	font-size:20px;
+	font-family:&quot;楷体&quot;;
+	border-style:solid;
+	border-width: 1px;
+	border-bottom-color: black;
+	border-right-color: black;
+	border-radius:6px;
+}
+
+QPushButton#jieshu:checked {
+    background-color: #8acdfa;
+	border-top-color: black;
+	border-left-color: black;
+	border-bottom-color: white;
+	border-right-color: white;
+}
+
+QPushButton#jieshu:pressed {
+	background-color: #8acdfa;
+	border-top-color: black;
+	border-left-color: black;
+	border-bottom-color: white;
+	border-right-color: white;
+}
+
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>结束</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	font-family:&quot;楷体&quot;;
+	font-size:15px
+}</string>
+           </property>
+           <property name="text">
+            <string>BIT</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,2,5,2,1">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(package/北理工.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>7</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>隶书</family>
+             <pointsize>-1</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLabel
+{
+	font-family:&quot;隶书&quot;;
+	font-size:40px;
+	font-weight: bold;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+           </property>
+           <property name="text">
+            <string>成像非接触式生理参数监测系统</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4"/>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="detect_Name">
+           <property name="styleSheet">
+            <string notr="true">QLabel{
+	font-size:1px;
+	color:#f8fbfc;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout" stretch="20,1,1">
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_14">
+       <property name="leftMargin">
+        <number>150</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="frame">
+         <property name="styleSheet">
+          <string notr="true">QLabel#frame
+{
+	background-color:rgb(230, 244, 255);
+	border-radius:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="xianshi">
+       <property name="styleSheet">
+        <string notr="true">QLabel#label_2{
+	font-family:&quot;楷体&quot;;
+	font-size:20px
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <property name="leftMargin">
+        <number>180</number>
+       </property>
+       <property name="rightMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="styleSheet">
+          <string notr="true">QProgressBar {
+	text-align:right;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: white;
+	margin-right: 35px;
+}
+
+QProgressBar::chunk {
+	text-align:right;
+    background-color: #51c2fc;
+	
+}</string>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="invertedAppearance">
+          <bool>false</bool>
+         </property>
+         <property name="textDirection">
+          <enum>QProgressBar::TopToBottom</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="1" rowspan="2">
+    <layout class="QVBoxLayout" name="verticalLayout_12">
+     <property name="leftMargin">
+      <number>100</number>
+     </property>
+     <property name="rightMargin">
+      <number>200</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="parameter_1">
+       <property name="styleSheet">
+        <string notr="true">QFrame#parameter_1
+{
+	background-color:white;
+	border-radius:20px;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="2,2,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="leftMargin">
+         <number>11</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_11">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">image: url(package/心率.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="bpm">
+          <property name="font">
+           <font>
+            <family>Tahoma</family>
+            <pointsize>-1</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:30px;
+	font-weight: bold;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+          </property>
+          <property name="text">
+           <string>70</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_21">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:16px;
+	font-weight: bold;
+	color:#cacaca;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+            </property>
+            <property name="text">
+             <string>HR</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="parameter_2">
+       <property name="styleSheet">
+        <string notr="true">QFrame#parameter_2
+{
+	background-color:white;
+	border-radius:20px;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="2,2,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_22">
+          <property name="styleSheet">
+           <string notr="true">image: url(package/S_健康呼吸首页.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="br">
+          <property name="styleSheet">
+           <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:30px;
+	font-weight: bold;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+          </property>
+          <property name="text">
+           <string>16</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:16px;
+	font-weight: bold;
+	color:#cacaca;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+            </property>
+            <property name="text">
+             <string>RR</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="parameter_3">
+       <property name="styleSheet">
+        <string notr="true">QFrame#parameter_3
+{
+	background-color:white;
+	border-radius:20px;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="2,2,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_25">
+          <property name="styleSheet">
+           <string notr="true">image: url(package/血氧.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="SpO2">
+          <property name="styleSheet">
+           <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:30px;
+	font-weight: bold;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+          </property>
+          <property name="text">
+           <string>95</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:16px;
+	font-weight: bold;
+	color:#cacaca;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+            </property>
+            <property name="text">
+             <string>SpO2</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="parameter_4">
+       <property name="styleSheet">
+        <string notr="true">QFrame#parameter_4
+{
+	background-color:white;
+	border-radius:20px;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="2,2,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_27">
+          <property name="styleSheet">
+           <string notr="true">image: url(package/情绪.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="emo">
+          <property name="styleSheet">
+           <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:22px;
+	font-weight: bold;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+          </property>
+          <property name="text">
+           <string>angry</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_9">
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:16px;
+	font-weight: bold;
+	color:#cacaca;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+            </property>
+            <property name="text">
+             <string>EMO</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="parameter_5">
+       <property name="styleSheet">
+        <string notr="true">QFrame#parameter_5
+{
+	background-color:white;
+	border-radius:20px;
+}</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="2,2,1">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_29">
+          <property name="styleSheet">
+           <string notr="true">image: url(package/waveform_path_ecg.png);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="score">
+          <property name="styleSheet">
+           <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:30px;
+	font-weight: bold;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+          </property>
+          <property name="text">
+           <string>47.5</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="topMargin">
+           <number>8</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="label_7">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	font-family:Tahoma;
+	font-size:16px;
+	font-weight: bold;
+	color:#cacaca;
+	qproperty-alignment: 'AlignVCenter | AlignHCenter';
+}</string>
+            </property>
+            <property name="text">
+             <string>HRV</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="jiemiantubiao.qrc"/>
+ </resources>
+ <connections/>
+</ui>

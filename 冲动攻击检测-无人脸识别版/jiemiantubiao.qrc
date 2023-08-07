@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="tb">
+    <file>jmtb/心率.png</file>
+    <file>jmtb/北京理工大学.png</file>
+    <file>jmtb/waveform_path_ecg.png</file>
+    <file>jmtb/对勾.png</file>
+    <file>jmtb/开关.png</file>
+    <file>jmtb/情绪.png</file>
+    <file>jmtb/face.png</file>
+    <file>jmtb/时钟.png</file>
+    <file>jmtb/血氧.png</file>
+    <file>jmtb/S_健康呼吸首页.png</file>
+  </qresource>
+</RCC>
