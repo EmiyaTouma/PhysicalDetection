@@ -18,6 +18,7 @@ from hrvanalysis import get_poincare_plot_features
 from scipy import interpolate
 import joblib
 from PIL import Image
+import EasyPySpin
 
 #########qt程序库引用##########
 import sys
@@ -631,19 +632,20 @@ class Heartbeat:
 ################################## 图像获取进程 ##############################
 # 获取5min图像
 class Td:
-    def __init__(self, frames, con):
+    def __init__(self, frames, con, img_lists):
         self.cap = None
         self.frameNum = 0
-        self.data_get(frames, con)  # q传出图像，con传入状态
+        self.data_get(frames, con, img_lists)  # q传出图像，con传入状态
 
-    def data_get(self, frames, con):
+    def data_get(self, frames, con, img_lists):
         yunxing = 0
         while True:
             if not con.empty():
                 yunxing = con.get()
             if yunxing == 1:
-                self.cap = cv2.VideoCapture(0)
+                self.cap = EasyPySpin.VideoCapture(0)
                 ret, last_frame = self.cap.read()
+                last_frame = cv2.cvtColor(last_frame, cv2.COLOR_BayerBG2BGR)
                 last_time1 = time.time()
 
                 # 测试时可调整为30s采样，即30 * FPS
@@ -658,13 +660,16 @@ class Td:
                         # 此处99为根据10FPS计算得出，如修改FPS则应修改此处值为(1000/FPS - 1)
                         if int((tmp - last_time1) * 1000) == 99:
                             ret, frame = self.cap.read()
+                            frame = cv2.cvtColor(frame, cv2.COLOR_BayerBG2BGR)
                             if ret:
                                 frames.put(frame)
+                                img_lists.put(np.array(frame))
                                 last_frame = frame
                                 last_time1 = time.time()
                                 break
                         elif int((tmp - last_time1) * 1000) > 99:
                             frames.put(last_frame)
+                            img_lists.put(np.array(last_frame))
                             last_time1 = time.time()
                             break
 
@@ -735,7 +740,8 @@ class mwindow(QWidget, Ui_jiemian):
             if self.djs % 31 == 0 and self.timeControl == 0:
                 self.timeControl = 1
 
-            img = cv2.cvtColor(self.output[0], cv2.COLOR_BGR2RGB)
+            img_list = img_lists.get()
+            img = cv2.cvtColor(img_list, cv2.COLOR_BGR2RGB)
             qimg = qimage2ndarray.array2qimage(img)
             pixmap = QPixmap(qimg)
             scaredPixmap = pixmap.scaled(400, 400, aspectRatioMode=Qt.KeepAspectRatio)
@@ -764,7 +770,8 @@ class mwindow(QWidget, Ui_jiemian):
             # self.tishi.setText('检测完成！按下结束按钮退出')
             self.xianshi.setText(scoretext)
 
-            img = cv2.cvtColor(self.output[0], cv2.COLOR_BGR2RGB)
+            img_list = img_lists.get()
+            img = cv2.cvtColor(img_list, cv2.COLOR_BGR2RGB)
             qimg = qimage2ndarray.array2qimage(img)
             pixmap = QPixmap(qimg)
             scaredPixmap = pixmap.scaled(400, 400, aspectRatioMode=Qt.KeepAspectRatio)
@@ -783,12 +790,12 @@ class mwindow(QWidget, Ui_jiemian):
             # self.tishi.setText('正在检测，剩余时间为{}秒'.format(self.djs))
             self.xianshi.setText('未检测到人脸！请保持正对摄像头')
 
-            img = cv2.cvtColor(self.output[0], cv2.COLOR_BGR2RGB)
+            img_list = img_lists.get()
+            img = cv2.cvtColor(img_list, cv2.COLOR_BGR2RGB)
             qimg = qimage2ndarray.array2qimage(img)
             pixmap = QPixmap(qimg)
             scaredPixmap = pixmap.scaled(400, 400, aspectRatioMode=Qt.KeepAspectRatio)
             self.frame.setPixmap(scaredPixmap)
-            # self.frame.setPixmap(QPixmap(qimg))
             self.frame.show()
 
     # 开始
@@ -856,13 +863,16 @@ if __name__ == '__main__':
     # 管道相关
     frames = Queue(5000)
     q = Queue()
+    img_lists = Queue(5000)
+
     con = Queue()
     con.put(0)
+
     con1 = Queue()
     con1.put(0)
 
     # 进程设置
-    frame_get = Process(target=Td, args=(frames, con))
+    frame_get = Process(target=Td, args=(frames, con, img_lists))
     frame_use = Process(target=Heartbeat, args=(frames, q, con1))
 
     frame_get.daemon = True
